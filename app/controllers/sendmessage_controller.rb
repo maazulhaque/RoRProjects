@@ -10,9 +10,9 @@ class SendmessageController < ApplicationController
     #  fcm = FCM.new("my_api_key", timeout: 3)
 
     # registration_ids= ["12", "13"] # an array of one or more client registration tokens
-    options =  params[:data]
+    # options =  params[:data]
 
-    # options = {data: {score: "123"}, collapse_key: "updated_score"}
+    options = {data: {score: "123"}, collapse_key: "updated_score"}
     response = fcm.send_with_notification_key("/topics/testMessage", data: options)
     # response = fcm.send(registration_ids,options)
     render json: response , status: 200
