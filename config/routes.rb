@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   root 'messaging#homepage'
   resources :fire
 
-  namespace :api, :defaults => {:format => :json} do
-    get 'sendmessage', to: "sendmessage#send"
-  end
+  # namespace :api do
+    # :defaults => {:format => :json} do
+  get 'sendmessage', to: "sendmessage#send"
+  # end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
