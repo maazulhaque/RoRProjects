@@ -18,6 +18,6 @@ class SendmessageController < ApplicationController
     render json: response , status: 200
   end
 
-  
+
 
 end
